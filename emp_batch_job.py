@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 
-def process_data():
+def main():
     spark = SparkSession.builder.appName("GCPDataprocJob").getOrCreate()
 
     # Define your GCS bucket and paths
@@ -25,4 +25,4 @@ def process_data():
     spark.stop()
 
 if __name__ == "__main__":
-    process_data()
+    main()
